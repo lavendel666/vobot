@@ -48,7 +48,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 // this will return a `User` object, just like `message.author`
 
                 const taggedUser = message.mentions.users.first();
-                console.log(taggedUser);
+                console.log(taggedUser.username);
                 //message.channel.send(`You wanted to kick: ${taggedUser.username}`);
                 bot.sendMessage(
                     {
