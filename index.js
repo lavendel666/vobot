@@ -12,8 +12,8 @@ client.once('ready', () => {
 // })
 
 client.on('message', message => {
-    if(message.content.startsWith(`${prefix}test`)){
-        message.channel.send("TESTEST")
+    if(message.content.startsWith(`${prefix}kak`)){
+        message.channel.send("VO VOOR DE LEDEN")
     }
 })
 
