@@ -33,7 +33,14 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     message: 'Pong!'
                 });
             break;
-            // Just add any case commands if you want to..
+
+            // VO 
+            case 'vo':
+            bot.sendMessage({
+                to: channelID,
+                message: 'VO VOOR DE LEDEN, VO VOOR DE PRAESES!!!'
+            });
+        break;
          }
      }
 });
