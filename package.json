@@ -1,0 +1,22 @@
+{
+  "name": "vobot",
+  "version": "1.0.0",
+  "description": "VO voor de leden!\r VO voor de koning!\r VO voor VObot!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lavendel666/vobot.git"
+  },
+  "author": "Darcula",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lavendel666/vobot/issues"
+  },
+  "homepage": "https://github.com/lavendel666/vobot#readme",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  }
+}
