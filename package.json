@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/lavendel666/vobot#readme",
   "dependencies": {
-    "discord.js": "^11.4.2"
+    "discord.js": "^11.4.2",
+    "giphy-js-sdk-core": "^1.0.6"
   }
 }
