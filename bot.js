@@ -34,7 +34,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 });
                 break;
 
-            // test 
+            // vo 
             case 'vo':
                 bot.sendMessage({
                     to: channelID,
@@ -59,5 +59,12 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 
                 break;
         }
+    }
+
+});
+
+client.on('message', message => {
+    if (message.content === '!ping') {
+        message.channel.send('Pong.');
     }
 });
