@@ -9,8 +9,8 @@ logger.add(new logger.transports.Console, {
 logger.level = 'debug';
 // Initialize Discord Bot
 var bot = new Discord.Client({
-   token: auth.token,
-   autorun: true
+    token: auth.token,
+    autorun: true
 });
 bot.on('ready', function (evt) {
     logger.info('Connected');
@@ -23,24 +23,33 @@ bot.on('message', function (user, userID, channelID, message, evt) {
     if (message.substring(0, 3) == 'vo ') {
         var args = message.substring(3).split(' ');
         var cmd = args[0];
-       
+
         args = args.splice(1);
-        switch(cmd) {
+        switch (cmd) {
             // !ping
             case 'ping':
                 bot.sendMessage({
                     to: channelID,
                     message: 'Pong!'
                 });
-            break;
+                break;
 
             // test 
             case 'vo':
-            bot.sendMessage({
-                to: channelID,
-                message: 'VO VOOR DE LEDEN, VO VOOR DE PRAESES!!!'
-            });
-        break;
-         }
-     }
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'VO VOOR DE LEDEN, VO VOOR DE PRAESES!!!'
+                });
+                break;
+
+            // user mention test
+            case 'test':
+                // grab the "first" mentioned user from the message
+                // this will return a `User` object, just like `message.author`
+                const taggedUser = message.mentions.users.first();
+                message.channel.send(`You wanted to kick: ${taggedUser.username}`);
+
+                break;
+        }
+    }
 });
