@@ -2,7 +2,7 @@ const { prefix } = require('../config.json');
 
 module.exports = {
     name: 'help',
-    description: 'List all of my commands or info about a specific command.',
+    description: 'Een lijst met commands waartoe de glorieuze VObot allemaal toe in staat is',
     aliases: ['commands'],
     usage: '[command name]',
     cooldown: 5,
@@ -11,15 +11,16 @@ module.exports = {
         const { commands } = message.client;
 
         if (!args.length) {
-            data.push('Here\'s a list of all my commands:');
+            data.push('Hier is een lijst met alle commands waartoe ik, de Prominent Lid VObot, allemaal toe in staat is. VO!');
             data.push(commands.map(command => command.name).join(', '));
             data.push(`\nYou can send \`${prefix}help [command name]\` to get info on a specific command!`);
 
-            return message.author.send(data, { split: true })
-                .then(() => {
-                    if (message.channel.type === 'dm') return;
-                    message.reply('I\'ve sent you a DM with all my commands!');
-                })
+//            return message.author.send(data, { split: true })
+             return message.channel.send(data, { split: true })
+//                 .then(() => {
+//                     if (message.channel.type === 'dm') return;
+//                     message.reply('Beste Feut, ik heb je maar even een notie gestuurd want het schijnt dat je er weer niks van bakt. Schaam je. Heel snel hobbelen!');
+//                 })
                 .catch(error => {
                     console.error(`Could not send help DM to ${message.author.tag}.\n`, error);
                     message.reply('it seems like I can\'t DM you!');
