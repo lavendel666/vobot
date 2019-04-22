@@ -3,8 +3,9 @@ const fetch = require('node-fetch');
 //require('es6-promise').polyfill();
 //require('isomorphic-fetch');
 const Discord = require('discord.js');
-const {prefix, token, giphyToken} = require('./config.json');
 
+const {prefix, token, giphyToken, nasaToken} = require('./config.json');
+nasatoken = nasaToken;
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
