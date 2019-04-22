@@ -5,7 +5,10 @@ const fetch = require('node-fetch');
 const Discord = require('discord.js');
 
 const {prefix, token, giphyToken, nasaToken} = require('./config.json');
+
+//global var:
 nasatoken = nasaToken;
+
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
